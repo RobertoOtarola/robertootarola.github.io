@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+:root {
+    --brand-bg: #E9C46A;
+    --brand-primary: #264653;
+    --brand-secondary: #2A9D8F;
+    --brand-accent: #FFFFFF;
+}
+
+body {
+    background-color: var(--brand-bg);
+    color: var(--brand-primary);
+    font-family: 'Roboto Condensed', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--brand-primary);
+}
+
+a {
+    color: var(--brand-secondary);
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+    color: var(--brand-primary);
+}
+
+/* Custom Navbar */
+.navbar-custom {
+    background-color: var(--brand-primary);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: var(--brand-accent) !important;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.navbar-custom .nav-link:hover {
+    color: var(--brand-secondary) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    background: url('../img/hero_bg.png') no-repeat center center/cover;
+    padding: 100px 0;
+    color: var(--brand-accent);
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(38, 70, 83, 0.85); /* Overlay --brand-primary */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    background: rgba(42, 157, 143, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 3rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.2);
+    display: inline-block;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    color: var(--brand-bg);
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.15rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+/* Buttons */
+.btn-brand {
+    background-color: var(--brand-secondary);
+    color: var(--brand-accent);
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-brand:hover {
+    background-color: var(--brand-primary);
+    color: var(--brand-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Cards */
+.card-project {
+    background-color: var(--brand-accent);
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(38, 70, 83, 0.2);
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 4px solid var(--brand-secondary);
+}
+
+.card-body {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    color: var(--brand-primary);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.card-text {
+    flex-grow: 1;
+    color: #4a4a4a;
+}
+
+/* Case Study Specific */
+.case-study-header {
+    background-color: var(--brand-primary);
+    color: var(--brand-accent);
+    padding: 4rem 0;
+    text-align: center;
+}
+.case-study-header h1 {
+    color: var(--brand-bg);
+}
+
+.case-study-section {
+    background: var(--brand-accent);
+    border-radius: 10px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.case-study-section h3 {
+    color: var(--brand-secondary);
+    border-bottom: 2px solid var(--brand-bg);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--brand-primary);
+    color: var(--brand-accent);
+    padding: 2rem 0;
+    text-align: center;
+}
+footer a {
+    color: var(--brand-bg);
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+footer a:hover {
+    color: var(--brand-accent);
+}
